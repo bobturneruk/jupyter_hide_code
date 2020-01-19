@@ -4,7 +4,7 @@
 
 Jupyter notebook environment with the [hide_code extension](https://github.com/kirbs-/hide_code) active.
 
-Click `launch binder` anywhere on this page to begin.
+Click a `launch binder` badge anywhere on this page to begin.
 
 -----
 

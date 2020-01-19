@@ -1,3 +1,5 @@
-jupyter contrib nbextension install --user
-jupyter nbextension enable --py widgetsnbextension
-jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38
+#jupyter contrib nbextension install --user
+jupyter nbextension install --sys-prefix hide_code
+jupyter nbextension enable --sys-prefix hide_code
+#jupyter serverextension enable --sys-prefix jupyter_server_proxy
+jupyter serverextension enable --sys-prefix hide_code

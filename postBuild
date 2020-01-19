@@ -1,4 +1,4 @@
-#jupyter contrib nbextension install --user
+jupyter contrib nbextension install --user
 jupyter nbextension install --sys-prefix hide_code
 jupyter nbextension enable --sys-prefix hide_code
 #jupyter serverextension enable --sys-prefix jupyter_server_proxy

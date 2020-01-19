@@ -1,3 +1,4 @@
 numpy
 matplotlib
+jupyter_contrib_nbextensions
 hide_code

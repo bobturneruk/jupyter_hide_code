@@ -5,7 +5,7 @@
 
 -----
 
-**TESTING ADDITION OF HIDE_CODE** See [here](https://github.com/damianavila/RISE/issues/32#issuecomment-493631621)
+**TESTING ADDITION OF HIDE_CODE** See [here](https://github.com/kirbs-/hide_code)
 
 
 -----

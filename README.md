@@ -7,5 +7,7 @@
 
 **TESTING ADDITION OF HIDE_CODE** See [here](https://github.com/kirbs-/hide_code)
 
+Got it working based on [here](https://stackoverflow.com/a/39169844/8508004) and implementing this so future launches will have the extension working upon launch.
+**WORK IN PROGRESS**
 
 -----

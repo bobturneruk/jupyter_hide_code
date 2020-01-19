@@ -4,7 +4,35 @@ jupyter nbextension enable --sys-prefix hide_code
 #jupyter serverextension enable --sys-prefix jupyter_server_proxy
 jupyter serverextension enable --sys-prefix hide_code
 
-# Try to fix the install based on https://github.com/kirbs-/hide_code/issues/29#issuecomment-274800019
+# Try to fix the install based on https://github.com/kirbs-/hide_code/issues/29#issuecomment-274800019 ; is necessary or despite all the 'install' steps
+# above hide_code.js won't be made.
 # Note that I used that even though different because old code listed at that link gave error saying
 # no install attriibute & only thing with install I saw when I ran `!python -c "import hide_code.hide_code as hc;print(dir(hc));"`
-#python -c "import hide_code.hide_code as hc;hc.install_bootstrapped_files()" 
+python -c "import hide_code.hide_code as hc;hc.install_bootstrapped_files()" 
+
+
+# Implement install fix described at https://stackoverflow.com/a/39169844/8508004 to get hide_code
+# showing in under `View` > `cell toolbar` menu and across toolbar proper.
+# To make general, I am going to try avoiding hardcoding in the Python version since hoping
+# to down the road combine with jupyter-rise and that install produces Python 3.6 at the moment.
+pyver=$(python -c "import sys; print (f'{sys.version_info.major}.{sys.version_info.minor}')")
+cd ~/.local/share/jupyter/nbextensions/
+cp -r hide_input hide_code
+cp /srv/conda/envs/notebook/lib/python$pyver/site-packages/notebook/static/custom/hide_code.js ./main.js
+rm hide-input.yaml 
+cat <<EOF > hide-code.yaml
+Type: IPython Notebook Extension
+Compatibility: 3.x, 4.x, 5.x
+Main: main.js
+Name: Hide code
+Icon: icon.png
+Description: "toggle display of selected code cell's input"
+Link: readme.md
+EOF
+cat <<EOF > readme.md
+Hide Code
+==========
+
+This extension allows hiding of all or specified, individual code cells in a notebook. See
+[here](https://github.com/kirbs-/hide_code#hide_code).
+EOF

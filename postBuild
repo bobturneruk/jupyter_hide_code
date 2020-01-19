@@ -13,7 +13,7 @@ python -c "import hide_code.hide_code as hc;hc.install_bootstrapped_files()"
 
 # Implement install fix described at https://stackoverflow.com/a/39169844/8508004 to get hide_code
 # showing in under `View` > `cell toolbar` menu and across toolbar proper.
-# To make general, I am going to try avoiding hardcoding in the Python version since hoping
+# To make general, going to try avoiding hardcoding in the Python version since hoping
 # to down the road combine with jupyter-rise and that install produces Python 3.6 at the moment.
 # Python version assignment based on https://stackoverflow.com/questions/14735366/cannot-assign-the-output-of-python-v-to-a-variable-in-bash and sending multiple
 # lines of text to output based on https://www.unix.com/shell-programming-and-scripting/31827-echo-block-lines.html

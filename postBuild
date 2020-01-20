@@ -39,4 +39,6 @@ Hide Code
 This extension allows hiding of all or specified, individual code cells in a notebook. See
 [here](https://github.com/kirbs-/hide_code#hide_code).
 EOF
-jupyter nbextension enable --sys-prefix hide_code
+# since it is now listed in the nbextensions like the others in `contrib nbextension` enable
+# it like them, based on python-markdown enabling in https://github.com/binder-examples/jupyter-extension/blob/1fecbd818ef84980ec1043e4b57edebf7053d1f9/postBuild
+jupyter nbextension enable hide_code/main

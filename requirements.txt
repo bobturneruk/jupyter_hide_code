@@ -1,5 +1,6 @@
 numpy
 matplotlib
 jupyter_contrib_nbextensions
+jupyter-server-proxy
 pdfkit
 hide_code

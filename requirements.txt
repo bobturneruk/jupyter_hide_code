@@ -3,4 +3,5 @@ matplotlib
 jupyter_contrib_nbextensions
 jupyter-server-proxy
 pdfkit
+xvfbwrapper
 hide_code

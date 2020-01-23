@@ -44,5 +44,12 @@ EOF
 # it like them, based on python-markdown enabling in https://github.com/binder-examples/jupyter-extension/blob/1fecbd818ef84980ec1043e4b57edebf7053d1f9/postBuild
 jupyter nbextension enable hide_code/main
 
+cd ~
+# enable xvfb with wkhtmltopdf as described here so it will work with pdfkit as shown at https://github.com/JazzCore/python-pdfkit/wiki/Using-wkhtmltopdf-without-X-server and similar to how I activated orca with xvfb at https://github.com/fomightez/orca-plotly-binderized/blob/master/postBuild 
+# When this works, it should allow the test at the last line of the code at https://github.com/JazzCore/python-pdfkit/wiki/Using-wkhtmltopdf-without-X-server , i.e., `wkhtmltopdf http://www.google.com output.pdf` at least not give that it cannot connect to X display
+printf '#!/bin/bash\nxvfb-run -a --server-args="-screen 0, 1024x768x24" /usr/bin/wkhtmltopdf -q $*' > /usr/bin/wkhtmltopdf.sh
+chmod a+x /usr/bin/wkhtmltopdf.sh
+ln -s /usr/bin/wkhtmltopdf.sh /usr/local/bin/wkhtmltopdf
+
 # leave with home as working directory (not sure if necessary)
 cd ~

@@ -4,15 +4,24 @@
 
 Jupyter notebook environment with the [hide_code extension](https://github.com/kirbs-/hide_code) active upon session launch. **No installation needed**.
 
+hide_code is a Jupyter notebook extension to selectively hide code, prompts and outputs with PDF and HTML exporting support.
+
 Click a `launch binder` badge anywhere on this page to begin.
 
 -----
 
+**Note: `Export to PDF via Latex` button on the far right side of the `hide_code` toolbar doesn't work here.** All other features are working.
+
 ## Technical details:
 
-This was a rather tricky extension to get working in sessions served from MyBinder.org/Binder. Solution based mainly on [here](https://stackoverflow.com/a/39169844/8508004) and [here](https://github.com/binder-examples/jupyter-extension/blob/1fecbd818ef84980ec1043e4b57edebf7053d1f9/postBuild).
+This was a rather tricky extension to get working in sessions served from MyBinder.org/Binder. Solution based mainly on [here](https://stackoverflow.com/a/39169844/8508004) and [here](https://github.com/binder-examples/jupyter-extension/blob/1fecbd818ef84980ec1043e4b57edebf7053d1f9/postBuild). Getting export to PDF working from the `hide_code` toolbar required enabling wkhtmltopdf to work headlessly similar to had been done for Orcas as I described [here](). serverproxy wasn't necessary for noteboook with hidden code to HTML when using the hide code menu on the toolbar pr for expoer to PDF from same toolbar. 
 
-serverproxy wasn't necessary for noteboook with hidden code to HTML when using the hide code menu on the toolbar. Is it necessary to go to pdf which looks like it uses URL as part of process? I 'll need to explore that next after realizing all this time I probably wasn't installing wkhtmltopdf because had not added to commit `apt.txt` until just now. It wasn't there when I was testing pdf export earlier. Should have better luck now.  
+`Export to PDF via Latex` button on the far right side of the `hide_code` toolbar doesn't work. I didn't try looking into what is necessary for that.
+
+still to do:
+- make better demo notebook since that was just a placholder and widgets don't render. Was there a good one at the hide_code repo?
+- for original repo and port all this over there and make a pull request noting that the badge URL would need fixing after the pull.
+
 
 -----
 

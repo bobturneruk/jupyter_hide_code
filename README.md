@@ -19,7 +19,7 @@ This was a rather tricky extension to get working in sessions served from MyBind
 `Export to PDF via Latex` button on the far right side of the `hide_code` toolbar doesn't work. I didn't try looking into what is necessary for that. **The `Export to PDF via HTML` button does work.** 
 
 still to do:
-- make better demo notebook since that was just a placeholder and while widgets do seem to render it would be nice to have a non-widgest plot there too. Do dataframes work? (if so, would be nice to point out over on dataframe2image as easier route/realted route if just need to make a document with a dataframe showing). Was there a good one at the hide_code repo?
+- make better demo notebook since that was just a placeholder and while widgets do seem to render it would be nice to have a non-widgest plot there too. Do dataframes work? (if so, would be nice to point out over on dataframe2image as easier route/related route if just need to make a document with a dataframe showing). Was there a good one at the hide_code repo?
 - for original repo and port all this over there and make a pull request noting that the badge URL would need fixing after the pull.
 
 

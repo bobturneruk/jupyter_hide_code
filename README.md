@@ -10,7 +10,7 @@ Click a `launch binder` badge anywhere on this page to begin.
 
 -----
 
-**Note: `Export to PDF via Latex` button on the far right side of the `hide_code` toolbar doesn't work here.** All other features, such as `Export to PDF via HTML`, are working.
+**Note: `Export to PDF via Latex` button on the far right side of the `hide_code` toolbar doesn't work here.** (ohhh, realized via a recent pull request [here](https://github.com/kirbs-/hide_code/pull/83) that links to [issue#65](https://github.com/kirbs-/hide_code/issues/65) that the button for that has been bugged for a while now.) All other features, such as `Export to PDF via HTML`, are working.
 
 ## Technical details:
 

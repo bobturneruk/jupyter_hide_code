@@ -1,6 +1,6 @@
 # Jupyter served via Binder with hide_code extension
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://beta.mybinder.org/v2/gh/bobturneruk/jupyter_hide_code/master?filepath=index.ipynb) 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bobturneruk/jupyter_hide_code/master?filepath=index.ipynb) 
 
 Jupyter notebook environment with the [hide_code extension](https://github.com/kirbs-/hide_code) active upon session launch. **No installation needed**.
 

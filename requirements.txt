@@ -1,5 +1,4 @@
 numpy
 matplotlib
-jupyter_contrib_nbextensions
 pdfkit
 hide_code==0.5.2
